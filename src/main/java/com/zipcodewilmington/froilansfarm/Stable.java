@@ -36,4 +36,5 @@ public class Stable {
     public void storeHorses(List<Horse> horses) {
         this.horses.addAll(horses);
     }
+    
 }
