@@ -9,7 +9,6 @@ public class ChickenCoop {
     private final List<Chicken> chickens = new ArrayList<>();
 
     public ChickenCoop() {}
-
     public ChickenCoop(Chicken chicken) {
         this.chickens.add(chicken);
     }
