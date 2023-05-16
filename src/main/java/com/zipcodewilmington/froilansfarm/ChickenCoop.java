@@ -10,7 +10,7 @@ public class ChickenCoop {
 
     public ChickenCoop() {}
 
-    public ChickenCoop(Chicken chicken){
+    public ChickenCoop(Chicken chicken) {
         this.chickens.add(chicken);
     }
 
@@ -37,4 +37,5 @@ public class ChickenCoop {
     public void storeChickens(List<Chicken> chickens) {
         this.chickens.addAll(chickens);
     }
+    
 }
