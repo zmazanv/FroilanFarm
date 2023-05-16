@@ -7,7 +7,6 @@ public class Chicken extends Animal implements Produce {
     public Chicken() {
         this.hasBeenFertilized = false;
     }
-
     public Chicken(boolean hasBeenFertilized) {
         this.hasBeenFertilized = hasBeenFertilized;
     }
