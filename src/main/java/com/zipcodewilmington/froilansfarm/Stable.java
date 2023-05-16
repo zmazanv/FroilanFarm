@@ -12,11 +12,9 @@ public class Stable {
     public Stable(Horse horse) {
         this.horses.add(horse);
     }
-
     public Stable(Horse[] horses) {
         this.horses.addAll(Arrays.asList(horses));
     }
-
     public Stable(List<Horse> horses) {
         this.horses.addAll(horses);
     }
@@ -25,16 +23,16 @@ public class Stable {
         return this.horses;
     }
 
-    public void storeHorse(Horse horse) {
-        this.horses.add(horse);
+    public void storeHorse(Horse horseToBeStored) {
+        this.horses.add(horseToBeStored);
     }
 
-    public void storeHorses(Horse[] horses) {
-        this.horses.addAll(Arrays.asList(horses));
+    public void storeHorses(Horse[] horsesToBeStored) {
+        this.horses.addAll(Arrays.asList(horsesToBeStored));
     }
 
-    public void storeHorses(List<Horse> horses) {
-        this.horses.addAll(horses);
+    public void storeHorses(List<Horse> horsesToBeStored) {
+        this.horses.addAll(horsesToBeStored);
     }
     
 }
