@@ -12,11 +12,9 @@ public class ChickenCoop {
     public ChickenCoop(Chicken chicken) {
         this.chickens.add(chicken);
     }
-
     public ChickenCoop(Chicken[] chickens) {
         this.chickens.addAll(Arrays.asList(chickens));
     }
-
     public ChickenCoop(List<Chicken> chickens) {
         this.chickens.addAll(chickens);
     }
@@ -25,16 +23,16 @@ public class ChickenCoop {
         return this.chickens;
     }
 
-    public void storeChicken(Chicken chicken) {
-        this.chickens.add(chicken);
+    public void storeChicken(Chicken chickenToBeStored) {
+        this.chickens.add(chickenToBeStored);
     }
 
-    public void storeChickens(Chicken[] chickens) {
-        this.chickens.addAll(Arrays.asList(chickens));
+    public void storeChickens(Chicken[] chickensToBeStored) {
+        this.chickens.addAll(Arrays.asList(chickensToBeStored));
     }
 
-    public void storeChickens(List<Chicken> chickens) {
-        this.chickens.addAll(chickens);
+    public void storeChickens(List<Chicken> chickensToBeStored) {
+        this.chickens.addAll(chickensToBeStored);
     }
     
 }
