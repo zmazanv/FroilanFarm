@@ -24,7 +24,11 @@ public class Chicken extends Animal implements Produce {
 
     @Override
     public Edible yield() {
-        return null;
+        if(this.hasBeenFertilized) {
+            return new EdibleEgg();
+        }else {
+            return null;
+        }
     }
 
 }
