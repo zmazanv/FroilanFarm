@@ -1,3 +1,3 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Vehicle {}
+public abstract class Vehicle implements NoiseMaker, Rideable {}
