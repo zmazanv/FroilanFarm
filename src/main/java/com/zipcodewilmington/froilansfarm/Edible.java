@@ -1,4 +1,3 @@
 package com.zipcodewilmington.froilansfarm;
 
-public interface Edible {
-}
+public interface Edible {}

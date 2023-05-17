@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
-public abstract class Person implements Eater, NoiseMaker{
+public abstract class Person implements Eater, NoiseMaker {
+
     private String name;
 
     public Person(String name) {
@@ -12,6 +13,6 @@ public abstract class Person implements Eater, NoiseMaker{
     }
 
     public void eat(Edible edible) {
-        System.out.println(this.name + "Eats " + edible);
+        System.out.println(this.name + " eats " + edible);
     }
 }

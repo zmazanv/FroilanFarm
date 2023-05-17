@@ -1,4 +1,3 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Rideable {
-}
+public class Rideable {}
