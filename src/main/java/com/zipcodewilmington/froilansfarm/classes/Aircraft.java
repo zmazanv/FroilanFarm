@@ -1,4 +1,4 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.classes;
 
 public class Aircraft extends Vehicle {
 
