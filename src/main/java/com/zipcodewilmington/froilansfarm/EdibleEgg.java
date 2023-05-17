@@ -1,3 +1,3 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class CropRow {}
+public class EdibleEgg {}

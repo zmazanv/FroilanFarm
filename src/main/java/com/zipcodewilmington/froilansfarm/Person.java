@@ -15,4 +15,5 @@ public abstract class Person implements Eater, NoiseMaker {
     public void eat(Edible edible) {
         System.out.println(this.name + " eats " + edible);
     }
+    
 }
