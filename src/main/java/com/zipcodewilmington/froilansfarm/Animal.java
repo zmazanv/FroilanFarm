@@ -7,5 +7,5 @@ public class Animal implements Eater, NoiseMaker {
 
     @Override
     public void makeNoise() {}
-    
+
 }
