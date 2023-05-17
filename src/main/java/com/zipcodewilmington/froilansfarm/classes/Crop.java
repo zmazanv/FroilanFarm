@@ -1,4 +1,6 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.classes;
+
+import com.zipcodewilmington.froilansfarm.interfaces.Produce;
 
 public abstract class Crop implements Produce {
 

@@ -1,4 +1,4 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.classes;
 
 import java.util.Arrays;
 import java.util.ArrayList;
