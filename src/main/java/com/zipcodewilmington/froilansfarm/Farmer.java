@@ -14,7 +14,6 @@ public class Farmer extends Person implements Botanist, Eater, Rider {
         System.out.println(this.getName() + " planted " +  crowRow + " of " + crop);
     }
 
-
     public void mount(Rideable rideable) {
         System.out.println(this.getName() + " gets on " + rideable );
     }
