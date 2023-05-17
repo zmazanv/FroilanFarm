@@ -7,7 +7,7 @@ public class Farmer extends Person implements Botanist, Eater, Rider {
     }
 
     public void eat(Edible edible) {
-        System.out.println(this.getName() + " eats" + edible);
+        System.out.println(this.getName() + " eats " + edible);
     }
 
     public void plant(Crop crop, CropRow crowRow) {
