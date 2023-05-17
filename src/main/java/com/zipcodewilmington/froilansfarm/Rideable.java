@@ -1,3 +1,9 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Rideable {}
+=======
+public interface Rideable {
+
+    void beDismounted();
+    void beMounted();
+
+}

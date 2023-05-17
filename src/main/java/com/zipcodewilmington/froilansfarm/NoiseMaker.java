@@ -1,3 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
-public interface NoiseMaker {}
+public interface NoiseMaker {
+
+    void makeNoise();
+
+}
