@@ -1,6 +1,10 @@
-package com.zipcodewilmington.froilansfarm;
+package com.zipcodewilmington.froilansfarm.classes;
 
-public class Chicken extends Animal implements Produce {
+import com.zipcodewilmington.froilansfarm.interfaces.Eater;
+import com.zipcodewilmington.froilansfarm.interfaces.NoiseMaker;
+import com.zipcodewilmington.froilansfarm.interfaces.Produce;
+
+public class Chicken implements Produce, Eater, NoiseMaker {
 
     private boolean hasBeenFertilized;
 
