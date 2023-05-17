@@ -1,3 +1,3 @@
-public class Tomato implements Edible {
+package com.zipcodewilmington.froilansfarm;
 
-}
+public class Tomato implements Edible {}

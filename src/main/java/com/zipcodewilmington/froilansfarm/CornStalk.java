@@ -1,4 +1,7 @@
+package com.zipcodewilmington.froilansfarm;
+
 public class CornStalk extends Crop {
+
     @Override
     public Edible yield() {
         if (hasBeenHarvested() && hasBeenFertilized()) {

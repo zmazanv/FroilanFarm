@@ -1,18 +1,21 @@
-abstract public class Crop implements Produce {
-    private boolean hasBeenHarvested;
+package com.zipcodewilmington.froilansfarm;
+
+public abstract class Crop implements Produce {
+
     private boolean hasBeenFertilized;
+    private boolean hasBeenHarvested;
 
     public Crop() {
-        this.hasBeenHarvested = false;
         this.hasBeenFertilized = false;
-    }
-
-    public boolean hasBeenHarvested() {
-        return hasBeenHarvested;
+        this.hasBeenHarvested = false;
     }
 
     public boolean hasBeenFertilized() {
         return hasBeenFertilized;
+    }
+
+    public boolean hasBeenHarvested() {
+        return hasBeenHarvested;
     }
 
     public void setHasBeenHarvested(boolean harvested) {
@@ -24,4 +27,3 @@ abstract public class Crop implements Produce {
     }
 
 }
-

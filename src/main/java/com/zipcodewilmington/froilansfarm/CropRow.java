@@ -1,7 +1,10 @@
+package com.zipcodewilmington.froilansfarm;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class CropRow {
+
     private List<Crop> crops;
 
     public CropRow() {
@@ -13,6 +16,7 @@ public class CropRow {
     }
 
     public List<Crop> getCrops() {
-        return crops;
+        return this.crops;
     }
+
 }
