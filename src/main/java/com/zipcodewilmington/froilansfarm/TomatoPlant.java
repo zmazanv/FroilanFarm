@@ -12,5 +12,4 @@ public class TomatoPlant extends Crop {
         }
     }
 
-
 }
