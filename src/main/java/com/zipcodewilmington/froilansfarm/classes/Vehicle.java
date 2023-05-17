@@ -6,17 +6,11 @@ import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
 public abstract class Vehicle implements NoiseMaker, Rideable {
 
   @Override
-    public void makeNoise() {
-
-    }
+    public void makeNoise() {}
 
     @Override
-    public void beDismounted() {
-
-    }
+    public void beDismounted() {}
 
     @Override
-    public void beMounted() {
-
-    }
+    public void beMounted() {}
 }
