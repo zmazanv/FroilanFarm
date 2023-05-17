@@ -13,4 +13,5 @@ public abstract class Vehicle implements NoiseMaker, Rideable {
 
     @Override
     public void beMounted() {}
+  
 }
