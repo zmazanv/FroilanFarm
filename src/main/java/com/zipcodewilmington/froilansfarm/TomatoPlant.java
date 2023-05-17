@@ -1,12 +1,15 @@
 package com.zipcodewilmington.froilansfarm;
 
 public class TomatoPlant extends Crop {
-    @Override
+   @Override
     public Edible yield() {
+
         if (hasBeenHarvested() && hasBeenFertilized()) {
-            return new Tomato();
+            return (new Tomato());
         } else {
             return null;
         }
     }
+
+
 }
