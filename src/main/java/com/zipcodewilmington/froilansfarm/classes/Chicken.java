@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.classes;
 
+import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.interfaces.Produce;
 
 public class Chicken extends Animal implements Produce {
@@ -20,5 +21,13 @@ public class Chicken extends Animal implements Produce {
     public boolean isFertilized() {
         return this.hasBeenFertilized;
     }
-    
+
+    @Override
+    public Edible yield() {
+        if(this.hasBeenFertilized) {
+            return new EdibleEgg();
+        }
+        return null;
+    }
+
 }

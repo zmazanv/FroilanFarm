@@ -1,3 +1,5 @@
 package com.zipcodewilmington.froilansfarm.classes;
 
-public class EdibleEgg {}
+import com.zipcodewilmington.froilansfarm.interfaces.Edible;
+
+public class EdibleEgg implements Edible {}
