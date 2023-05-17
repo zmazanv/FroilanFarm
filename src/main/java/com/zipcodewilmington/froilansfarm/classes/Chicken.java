@@ -1,10 +1,9 @@
 package com.zipcodewilmington.froilansfarm.classes;
 
-import com.zipcodewilmington.froilansfarm.interfaces.Eater;
-import com.zipcodewilmington.froilansfarm.interfaces.NoiseMaker;
+import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.interfaces.Produce;
 
-public class Chicken implements Produce, Eater, NoiseMaker {
+public class Chicken extends Animal implements Produce {
 
     private boolean hasBeenFertilized;
 
@@ -22,5 +21,10 @@ public class Chicken implements Produce, Eater, NoiseMaker {
     public boolean isFertilized() {
         return this.hasBeenFertilized;
     }
-    
+
+    @Override
+    public Edible yield() {
+        return null;
+    }
+
 }

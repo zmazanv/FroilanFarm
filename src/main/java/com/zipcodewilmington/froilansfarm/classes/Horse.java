@@ -1,7 +1,13 @@
 package com.zipcodewilmington.froilansfarm.classes;
 
-import com.zipcodewilmington.froilansfarm.interfaces.Eater;
-import com.zipcodewilmington.froilansfarm.interfaces.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
 
-public class Horse implements Rideable, Eater, NoiseMaker {}
+public class Horse extends Animal implements Rideable {
+
+    @Override
+    public void beDismounted() {}
+
+    @Override
+    public void beMounted() {}
+
+}
