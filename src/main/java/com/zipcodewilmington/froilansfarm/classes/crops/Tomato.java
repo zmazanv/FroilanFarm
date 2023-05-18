@@ -1,4 +1,4 @@
-package com.zipcodewilmington.froilansfarm.classes;
+package com.zipcodewilmington.froilansfarm.classes.crops;
 
 import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 

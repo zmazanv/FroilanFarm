@@ -3,6 +3,7 @@ package com.zipcodewilmington.froilansfarm.classes;
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
+import com.zipcodewilmington.froilansfarm.classes.persons.Person;
 
 public class FarmHouse {
 
@@ -48,10 +49,15 @@ public class FarmHouse {
         return residentsRemoved;
     }
     public List<Person> removeResidents(List<Person> residentsToBeRemoved) {
-        List<Person> residentsRemoved = new ArrayList<Person>(this.residents);
+        List<Person> residentsRemoved = new ArrayList<>(this.residents);
         residentsRemoved.retainAll(residentsToBeRemoved);
         this.residents.removeAll(residentsToBeRemoved);
         return residentsRemoved;
+    }
+    public List<Person> clearResidents() {
+        List<Person> clearedResidents = new ArrayList<>(this.residents);
+        this.residents.clear();
+        return clearedResidents;
     }
 
 }
