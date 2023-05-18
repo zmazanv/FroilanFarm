@@ -1,13 +1,12 @@
-package com.zipcodewilmington.froilansfarm.classes;
+package com.zipcodewilmington.froilansfarm.classes.animals;
 
 import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
 
 public class Horse extends Animal implements Rideable {
 
     @Override
-    public void beDismounted() {}
-
-    @Override
-    public void beMounted() {}
+    public void makeNoise() {
+        System.out.println("*NEIGH*");
+    }
 
 }

@@ -1,7 +1,6 @@
-package com.zipcodewilmington.froilansfarm.classes;
+package com.zipcodewilmington.froilansfarm.classes.persons;
 
 import com.zipcodewilmington.froilansfarm.interfaces.Eater;
-import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.interfaces.NoiseMaker;
 
 public abstract class Person implements Eater, NoiseMaker {
@@ -16,8 +15,8 @@ public abstract class Person implements Eater, NoiseMaker {
         return this.name;
     }
 
-    public void eat(Edible edible) {
-        System.out.println(this.name + " eats " + edible);
+    public void setName(String name) {
+        this.name = name;
     }
-    
+
 }
