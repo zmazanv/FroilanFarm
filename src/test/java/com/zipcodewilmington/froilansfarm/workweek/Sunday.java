@@ -47,6 +47,6 @@ public class Sunday {
                 horses[x].eat(corn);
             }
         }
-        Assert.assertEquals();
+        //Assert.assertEquals();
     }
 }
