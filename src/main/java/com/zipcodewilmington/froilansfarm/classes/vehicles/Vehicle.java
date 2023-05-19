@@ -5,13 +5,9 @@ import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
 
 public abstract class Vehicle implements NoiseMaker, Rideable {
 
-
-
     @Override
     public void makeNoise() {
         System.out.println("*ROOM*");
     }
-
-
 
 }
