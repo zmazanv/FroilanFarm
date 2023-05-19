@@ -10,4 +10,9 @@ public class Tractor extends Vehicle implements FarmVehicle {
         farm.getField().harvest();
     }
 
+    @Override
+    public String toString() {
+        return "Tractor";
+    }
+    
 }
