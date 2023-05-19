@@ -1,15 +1,8 @@
 package com.zipcodewilmington.froilansfarm;
 
-import com.zipcodewilmington.froilansfarm.classes.Farm;
-import com.zipcodewilmington.froilansfarm.classes.FarmHouse;
-import com.zipcodewilmington.froilansfarm.classes.animals.Horse;
-import com.zipcodewilmington.froilansfarm.classes.animals.Stable;
-import com.zipcodewilmington.froilansfarm.classes.crops.*;
-import com.zipcodewilmington.froilansfarm.classes.persons.Farmer;
-import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
-
 import java.util.ArrayList;
 import java.util.List;
+import com.zipcodewilmington.froilansfarm.*;
 
 /**
  * Created by leon on 2/26/18.
@@ -17,10 +10,18 @@ import java.util.List;
 public class MainApplication {
 
     public static void main(String[] args) {
+        
+        List<Vehicle> farmVehicles = new ArrayList<>();
+        CropDuster cropDuster = new CropDuster();
+        Tractor tractor = new Tractor();
+        farmVehicles.add(tractor);
+        farmVehicles.add(cropDuster);
+        
+        Farmer froilan = new Farmer("Froilan");
+        Pilot froilanda = new Pilot("Froilanda", cropDuster);
 
-        Farmer froilan = new Farmer("froilan");
         FarmHouse froilanFarmHouse = new FarmHouse();
-        froilanFarmHouse.addResident(froilan);
+        froilanFarmHouse.addResident(froilan, froilanda);
 
         Crop[] earCorn = new CornStalk[10];
         for(int c = 0; c < earCorn.length; c++){
@@ -60,7 +61,14 @@ public class MainApplication {
         System.out.println(froilanField.getContainedCropRows());
 
         Farm froilanFarm = new Farm(froilanFarmHouse, froilanField);
-
+        System.out.println(froilan);
+        System.out.println(froilanda);
+        System.out.println(farm);
+        // Print out the farmVehicles list
+        for (Vehicle vehicle : farmVehicles) {
+            System.out.println(vehicle); //
+        }
+    
     }
-
+    
 }
