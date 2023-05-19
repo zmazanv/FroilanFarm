@@ -91,4 +91,9 @@ public class Field {
         }
     }
 
+    @Override
+    public String toString() {
+        return this.containedCropRows.toString();
+    }
+
 }
