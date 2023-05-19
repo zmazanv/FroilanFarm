@@ -13,42 +13,68 @@ import java.util.List;
  */
 public class MainApplication {
     public static void main(String[] args) {
-        
-        Horse thunder = new Horse();
-        Horse Stardust = new Horse();
-        Horse Midnight = new Horse();
-        Horse Bella = new Horse();
-        Horse Maverick = new Horse();
-        Horse Spirit  = new Horse();
-        Horse Blaze= new Horse();
-        Horse Luna = new Horse();
-        Horse Shadow = new Horse();
-        Horse Atlas = new Horse();
-
-        List<Horse>horseList1 = new ArrayList<>();
-        horseList1.add(thunder);
-        horseList1.add(Stardust);
-        horseList1.add(Midnight);
-        List<Horse>horseList2 = new ArrayList<>();
-        horseList1.add(Bella);
-        horseList1.add(Maverick);
-        horseList1.add(Spirit);
 
 
-        List<Horse>horseList3 = new ArrayList<>();
-        horseList1.add(Blaze);
-        horseList1.add(Luna);
-        horseList1.add(Shadow);
-        horseList1.add(Atlas);
+        Stable stable1 = new Stable();
+        Stable stable2 = new Stable();
+        Stable stable3 = new Stable();
 
-        List<Stable> stables = new ArrayList<>();
-        stables.add(1,new Stable(horseList1));
-        stables.add(2,new Stable(horseList2));
-        stables.add(3,new Stable(horseList3));
+        List<Horse> horseList1 = new ArrayList<>();
+        for (int i = 0; i < 4; i++) {
+            Horse horse = new Horse();
+            horseList1.add(horse);
 
-       List<Chicken> chickenList = new ArrayList<>();
+        }
+        stable1.storeHorses(horseList1);
+        List<Horse> horseList2 = new ArrayList<>();
+        for (int i = 0; i < 3; i++) {
+            Horse horse = new Horse();
+            horseList2.add(horse);
 
+        }
+        stable2.storeHorses(horseList2);
 
+        List<Horse> horseList3 = new ArrayList<>();
+        for (int i = 0; i < 3; i++) {
+            Horse horse = new Horse();
+            horseList3.add(horse);
+
+        }
+        stable3.storeHorses(horseList3);
+
+        // create an instance of a stable and a chicken coop
+        ChickenCoop chickenCoop1 = new ChickenCoop();
+        ChickenCoop chickenCoop2 = new ChickenCoop();
+        ChickenCoop chickenCoop3 = new ChickenCoop();
+        ChickenCoop chickenCoop4 = new ChickenCoop();
+
+        List<Chicken> chickenList1 = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            Chicken chicken = new Chicken();
+            chickenList1.add(chicken);
+            chickenCoop1.storeChickens(chickenList1);
+        }
+        List<Chicken> chickenList2 = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            Chicken chicken = new Chicken();
+            chickenList2.add(chicken);
+            chickenCoop2.storeChickens(chickenList2);
+        }
+        List<Chicken> chickenList3 = new ArrayList<>();
+        for (int i = 0; i < 3; i++) {
+            Chicken chicken = new Chicken();
+            chickenList3.add(chicken);
+            chickenCoop3.storeChickens(chickenList3);
+        }
+        List<Chicken> chickenList4 = new ArrayList<>();
+        for (int i = 0; i < 2; i++) {
+            Chicken chicken = new Chicken();
+            chickenList4.add(chicken);
+            chickenCoop4.storeChickens(chickenList4);
+
+        }
 
     }
+
 }
+
