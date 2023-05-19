@@ -34,7 +34,7 @@ public class Monday {
         field.storeCropRow(rowTwo);
 
         Farm farm = new Farm(farmHouse, field);
-        
+
         pilot.mount(cropDuster);
         cropDuster.fly();
 
