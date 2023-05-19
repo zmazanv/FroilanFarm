@@ -40,4 +40,14 @@ public class Chicken extends Animal implements Produce {
         System.out.println("\"Cluck\"");
     }
 
+    @Override
+    public String toString() {
+        StringBuilder response = new StringBuilder(this.getClass().getSimpleName());
+        if (this.hasBeenFertilized) {
+            response.append(" has been fertilized.");
+        } else {
+            response.append(" has not been fertilized.");
+        }
+        return response.toString();
+    }
 }

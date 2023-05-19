@@ -2,6 +2,8 @@ package com.zipcodewilmington.froilansfarm;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.WeakHashMap;
+
 import com.zipcodewilmington.froilansfarm.classes.*;
 import com.zipcodewilmington.froilansfarm.classes.animals.*;
 import com.zipcodewilmington.froilansfarm.classes.crops.*;
@@ -15,124 +17,255 @@ Created by leon on 2/26/18.
 public class MainApplication {
 
     public static void main(String[] args) {
-        
+
+        ///////////////////////////////////////////////////////////////////////
+        // VEHICLES
+        ///////////////////////////////////////////////////////////////////////
+        // Creates list to store FarmVehicles
         List<Vehicle> farmVehicles = new ArrayList<>();
+
+        // Creates new CropDuster
         CropDuster cropDuster = new CropDuster();
+        //
+        // Creates new Tractor
         Tractor tractor = new Tractor();
-        farmVehicles.add(tractor);
+
+        // Adds CropDuster to list of FarmVehicles
         farmVehicles.add(cropDuster);
-        
+        //
+        // Adds Tractor to list of FarmVehicles
+        farmVehicles.add(tractor);
+        ///////////////////////////////////////////////////////////////////////
+
+
+        ///////////////////////////////////////////////////////////////////////
+        // PERSONS
+        ///////////////////////////////////////////////////////////////////////
         Farmer froilan = new Farmer("Froilan");
         Pilot froilanda = new Pilot("Froilanda", cropDuster);
+        ///////////////////////////////////////////////////////////////////////
 
+
+        ///////////////////////////////////////////////////////////////////////
+        // ANIMALS
+        ///////////////////////////////////////////////////////////////////////
+        // Chickens
+        ///////////////////////////////////////////////////////////////////////
+        // Creates 4 ChickenCoops
+        ChickenCoop chickenCoopOne = new ChickenCoop();
+        ChickenCoop chickenCoopTwo = new ChickenCoop();
+        ChickenCoop chickenCoopThree = new ChickenCoop();
+        ChickenCoop chickenCoopFour = new ChickenCoop();
+
+        // Adds 5 new Chickens to ChickenCoop one
+        for (int i = 0; i < 5; i++) {
+            chickenCoopOne.storeChicken(new Chicken());
+        }
+        //
+        // Adds 5 new Chickens to ChickenCoop two
+        for (int i = 0; i < 5; i++) {
+            chickenCoopTwo.storeChicken(new Chicken());
+        }
+        //
+        // Adds 3 new Chickens to ChickenCoop three
+        for (int i = 0; i < 3; i++) {
+            chickenCoopThree.storeChicken(new Chicken());
+        }
+        //
+        // Adds 2 new Chickens to ChickenCoop four
+        for (int i = 0; i < 2; i++) {
+            chickenCoopFour.storeChicken(new Chicken());
+        }
+        ///////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////
+        // Horses
+        ///////////////////////////////////////////////////////////////////////
+        // Creates 4 Stables
+        Stable stableOne = new Stable();
+        Stable stableTwo = new Stable();
+        Stable stableThree = new Stable();
+
+        // Adds 4 new Horses to Stable one
+        for (int i = 0; i < 4; i++) {
+            stableOne.storeHorse(new Horse());
+        }
+        //
+        // Adds 3 new Horses to Stable two
+        for (int i = 0; i < 3; i++) {
+            stableTwo.storeHorse(new Horse());
+        }
+        //
+        // Adds 3 new Horses to Stable three
+        for (int i = 0; i < 3; i++) {
+            stableThree.storeHorse(new Horse());
+        }
+        ///////////////////////////////////////////////////////////////////////
+
+
+        ///////////////////////////////////////////////////////////////////////
+        // CROPS
+        ///////////////////////////////////////////////////////////////////////
+        // CrowRows
+        ///////////////////////////////////////////////////////////////////////
+        // Creates 5 CropRows
+        CropRow cornStalkCropRow = new CropRow();
+        CropRow tomatoPlantCropRow = new CropRow();
+        CropRow mixedCropRowOne = new CropRow();
+        CropRow mixedCropRowTwo = new CropRow();
+        CropRow mixedCropRowThree = new CropRow();
+
+
+        // Adds 10 new CornStalks to CropRow for CornStalks
+        for (int i = 0; i < 10; i++) {
+            cornStalkCropRow.storeCrop(new CornStalk());
+        }
+        //
+        // Adds 8 new TomatoPlants to CropRow for TomatoPlants
+        for (int i = 0; i < 8; i++) {
+            tomatoPlantCropRow.storeCrop(new TomatoPlant());
+        }
+        //
+        // Adds 4 new CornStalks to MixedCropRow one
+        for (int i = 0; i < 4; i++) {
+            mixedCropRowOne.storeCrop(new CornStalk());
+        }
+        // Adds 6 new TomatoPlants to MixedCropRow one
+        for (int i = 0; i < 6; i++) {
+            mixedCropRowOne.storeCrop(new TomatoPlant());
+        }
+        // Adds 3 new WheatPlants to MixedCropRow one
+        for (int i = 0; i < 3; i++) {
+            mixedCropRowOne.storeCrop(new WheatPlant());
+        }
+        //
+        // Adds 6 new CornStalks to MixedCropRow two
+        for (int i = 0; i < 6; i++) {
+            mixedCropRowTwo.storeCrop(new CornStalk());
+        }
+        // Adds 3 new TomatoPlants to MixedCropRow two
+        for (int i = 0; i < 3; i++) {
+            mixedCropRowTwo.storeCrop(new TomatoPlant());
+        }
+        // Adds 5 new WheatPlants to MixedCropRow two
+        for (int i = 0; i < 5; i++) {
+            mixedCropRowTwo.storeCrop(new WheatPlant());
+        }
+        //
+        // Adds 4 new CornStalks to MixedCropRow three
+        for (int i = 0; i < 4; i++) {
+            mixedCropRowThree.storeCrop(new CornStalk());
+        }
+        // Adds 3 new TomatoPlants to MixedCropRow three
+        for (int i = 0; i < 3; i++) {
+            mixedCropRowThree.storeCrop(new TomatoPlant());
+        }
+        // Adds 2 new WheatPlants to MixedCropRow three
+        for (int i = 0; i < 2; i++) {
+            mixedCropRowThree.storeCrop(new WheatPlant());
+        }
+        ///////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////
+        // Field
+        ///////////////////////////////////////////////////////////////////////
+        // Creates Field
+        Field froilanFarmField = new Field();
+
+        // Adds CropRow for CornStalks to Field
+        froilanFarmField.storeCropRow(cornStalkCropRow);
+        //
+        // Adds CropRow for TomatoPlants to Field
+        froilanFarmField.storeCropRow(tomatoPlantCropRow);
+        //
+        // Adds 3 Mixed Crop Rows
+        froilanFarmField.storeCropRow(mixedCropRowOne);
+        froilanFarmField.storeCropRow(mixedCropRowTwo);
+        froilanFarmField.storeCropRow(mixedCropRowThree);
+        ///////////////////////////////////////////////////////////////////////
+
+
+        ///////////////////////////////////////////////////////////////////////
+        // FARM
+        ///////////////////////////////////////////////////////////////////////
+        // FarmHouse
+        ///////////////////////////////////////////////////////////////////////
+        // Creates new FarmHouse
         FarmHouse froilanFarmHouse = new FarmHouse();
+
+        // Adds Froilan as resident to the Froilan FarmHouse
         froilanFarmHouse.addResident(froilan);
+        //
+        // Adds Froilanda as resident to the Froilan FarmHouse
         froilanFarmHouse.addResident(froilanda);
+        ///////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////
+        // Farm
+        ///////////////////////////////////////////////////////////////////////
+        Farm froilanFarm = new Farm(froilanFarmHouse, froilanFarmField);
 
-        Crop[] earCorn = new CornStalk[10];
-        for(int c = 0; c < earCorn.length; c++){
-            earCorn[c] = new CornStalk();
-        }
-        Crop[] tomato = new TomatoPlant[10];
-        for(int t = 0; t < tomato.length; t++){
-            tomato[t] = new TomatoPlant();
-        }
-        List<Crop> cropsOfCorn = List.of(new Crop[]{earCorn[0], earCorn[1],
-                earCorn[2], earCorn[3]});
-        List<Crop> cropsOfTomato = List.of(new Crop[]{tomato[0], tomato[1],
-                tomato[2], tomato[3]});
-        List<Crop> mixOfCrops1 = List.of(new Crop[]{earCorn[4], earCorn[5],
-                tomato[4], tomato[5]});
-        List<Crop> mixOfCrops2 = List.of(new Crop[]{tomato[6], earCorn[6],
-                tomato[7], earCorn[7]});
-        List<Crop> mixOfCrops3 = List.of(new Crop[]{earCorn[8], tomato[8],
-                earCorn[9], tomato[9]});
+        froilanFarm.addChickenCoop(chickenCoopOne);
+        froilanFarm.addChickenCoop(chickenCoopTwo);
+        froilanFarm.addChickenCoop(chickenCoopThree);
+        froilanFarm.addChickenCoop(chickenCoopFour);
 
-        CropRow[] cropRows = new CropRow[5];
-        for(int x = 0; x < cropRows.length; x++){
-            cropRows[x] = new CropRow();
-        }
-        cropRows[0].storeCrops(cropsOfCorn);
-        cropRows[1].storeCrops(cropsOfTomato);
-        cropRows[2].storeCrops(mixOfCrops1);
-        cropRows[3].storeCrops(mixOfCrops2);
-        cropRows[4].storeCrops(mixOfCrops3);
+        froilanFarm.addStable(stableOne);
+        froilanFarm.addStable(stableTwo);
+        froilanFarm.addStable(stableThree);
+        ///////////////////////////////////////////////////////////////////////
 
-        Field froilanField = new Field();
-        froilanField.storeCropRows(cropRows);
-        System.out.println(cropsOfTomato.size());
-        System.out.println(cropsOfCorn.size());
-        System.out.println(mixOfCrops1.size());
-        System.out.println(froilanField.getContainedCropRows().size());
-        System.out.println(froilanField.getContainedCropRows());
 
-        Farm froilanFarm = new Farm(froilanFarmHouse, froilanField);
+
+        ///////////////////////////////////////////////////////////////////////
+        // PRINTED OUTPUT
+        ///////////////////////////////////////////////////////////////////////
+        System.out.println("###############################################################################");
+        System.out.println("Vehicles:");
+        System.out.println(farmVehicles);
+        System.out.println("###############################################################################");
+        System.out.println();
+        System.out.println("###############################################################################");
+        System.out.println("Persons:");
         System.out.println(froilan);
         System.out.println(froilanda);
-        System.out.println(froilanFarm);
-        // Print out the farmVehicles list
-        for (Vehicle vehicle : farmVehicles) {
-            System.out.println(vehicle);
+        System.out.println("###############################################################################");
+        System.out.println();
+        System.out.println("###############################################################################");
+        System.out.println("Field:");
+        System.out.println("Froilan Farm's Field has " + froilanFarmField.getContainedCropRows().size() + " CropRows.");
+        System.out.println("-------------------------------------------------------------------------------");
+        for (int i = 0; i < froilanFarmField.getContainedCropRows().size(); i++) {
+            System.out.println("CropRow " + (i + 1) + " contains " + froilanFarmField.getContainedCropRows().get(i).getContainedCrops().size() + " Crops:");
+            for (int ii = 0; ii < froilanFarmField.getContainedCropRows().get(i).getContainedCrops().size(); ii++) {
+                System.out.println((ii + 1) + ".: " + froilanFarmField.getContainedCropRows().get(i).getContainedCrops().get(ii));
+            }
+            System.out.println("-------------------------------------------------------------------------------");
         }
-      
-        Stable stable1 = new Stable();
-        Stable stable2 = new Stable();
-        Stable stable3 = new Stable();
+        System.out.println("###############################################################################");
+        System.out.println();
+        System.out.println("###############################################################################");
+        System.out.println("Animals");
+        System.out.println("-------------------------------------------------------------------------------");
+        System.out.println("Froilan's Farm has " + froilanFarm.getChickenCoops().size() + " ChickenCoops.");
+        System.out.println("-------------------------------------------------------------------------------");
+        for (int i = 0; i < froilanFarm.getChickenCoops().size(); i++) {
+            System.out.println("ChickenCoop " + (i + 1) + " contains " + froilanFarm.getChickenCoops().get(i).getHeldChickens().size() + " Chickens:");
+            for (int ii = 0; ii < froilanFarm.getChickenCoops().get(i).getHeldChickens().size(); ii++) {
+                System.out.println((ii + 1) + ".: " + froilanFarm.getChickenCoops().get(i).getHeldChickens().get(ii));
+            }
+            System.out.println("-------------------------------------------------------------------------------");
+        }
+        System.out.println("===============================================================================");
+        System.out.println("Froilan's Farm has " + froilanFarm.getStables().size() + " Stables.");
+        System.out.println("-------------------------------------------------------------------------------");
+        for (int i = 0; i < froilanFarm.getStables().size(); i++) {
+            System.out.println("Stable " + (i + 1) + " contains " + froilanFarm.getStables().get(i).getHeldHorses().size() + " Horses:");
+            for (int ii = 0; ii < froilanFarm.getStables().get(i).getHeldHorses().size(); ii++) {
+                System.out.println((ii + 1) + ".: " + froilanFarm.getStables().get(i).getHeldHorses().get(ii));
+            }
+            System.out.println("-------------------------------------------------------------------------------");
+        }
+        System.out.println("###############################################################################");
+        ///////////////////////////////////////////////////////////////////////
 
-        List<Horse> horseList1 = new ArrayList<>();
-        for (int i = 0; i < 4; i++) {
-            Horse horse = new Horse();
-            horseList1.add(horse);
-        }
-        stable1.storeHorses(horseList1);
-      
-        List<Horse> horseList2 = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
-            Horse horse = new Horse();
-            horseList2.add(horse);
-        }
-        stable2.storeHorses(horseList2);
-
-        List<Horse> horseList3 = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
-            Horse horse = new Horse();
-            horseList3.add(horse);
-        }
-        stable3.storeHorses(horseList3);
-
-        // create an instance of a stable and a chicken coop
-        ChickenCoop chickenCoop1 = new ChickenCoop();
-        ChickenCoop chickenCoop2 = new ChickenCoop();
-        ChickenCoop chickenCoop3 = new ChickenCoop();
-        ChickenCoop chickenCoop4 = new ChickenCoop();
-
-        List<Chicken> chickenList1 = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            Chicken chicken = new Chicken();
-            chickenList1.add(chicken);
-            chickenCoop1.storeChickens(chickenList1);
-        }
-        List<Chicken> chickenList2 = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            Chicken chicken = new Chicken();
-            chickenList2.add(chicken);
-            chickenCoop2.storeChickens(chickenList2);
-        }
-        List<Chicken> chickenList3 = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
-            Chicken chicken = new Chicken();
-            chickenList3.add(chicken);
-            chickenCoop3.storeChickens(chickenList3);
-        }
-        List<Chicken> chickenList4 = new ArrayList<>();
-        for (int i = 0; i < 2; i++) {
-            Chicken chicken = new Chicken();
-            chickenList4.add(chicken);
-            chickenCoop4.storeChickens(chickenList4);
-
-        }
-    
     }
-    
 }
 
