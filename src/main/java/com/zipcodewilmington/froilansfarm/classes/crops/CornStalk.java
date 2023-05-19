@@ -36,4 +36,9 @@ public class CornStalk extends Crop {
         }
     }
 
+    @Override
+    public String toString() {
+        return "Corn Stalk";
+    }
+
 }
