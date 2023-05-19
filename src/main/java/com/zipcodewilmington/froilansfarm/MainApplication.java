@@ -26,7 +26,8 @@ public class MainApplication {
         Pilot froilanda = new Pilot("Froilanda", cropDuster);
 
         FarmHouse froilanFarmHouse = new FarmHouse();
-        froilanFarmHouse.addResident(froilan, froilanda);
+        froilanFarmHouse.addResident(froilan);
+        froilanFarmHouse.addResident(froilanda);
 
         Crop[] earCorn = new CornStalk[10];
         for(int c = 0; c < earCorn.length; c++){
