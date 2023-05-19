@@ -13,9 +13,11 @@ public interface Rider {
    and unrelated.
    */
     default void dismount(Rideable rideableToBeDismounted) {
+        rideableToBeDismounted.beDismounted();
         System.out.println(this.getClass().getSimpleName() + " has dismounted " + rideableToBeDismounted.getClass().getSimpleName() + '.');
     }
     default void mount(Rideable rideableToBeMounted) {
+        rideableToBeMounted.beMounted();
         System.out.println(this.getClass().getSimpleName() + " has mounted " + rideableToBeMounted.getClass().getSimpleName() + '.');
     }
 
