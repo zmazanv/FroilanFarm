@@ -29,9 +29,4 @@ public class TomatoPlant extends Crop {
         }
     }
 
-    @Override
-    public String toString() {
-        return "Tomato Plant";
-    }
-
 }

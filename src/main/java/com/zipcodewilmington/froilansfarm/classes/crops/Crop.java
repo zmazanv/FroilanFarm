@@ -49,10 +49,17 @@ public abstract class Crop implements Produce {
 
     @Override
     public String toString() {
-        return "Crop{" +
-                "hasBeenFertilized=" + hasBeenFertilized +
-                ", hasBeenHarvested=" + hasBeenHarvested +
-                '}';
+        StringBuilder response = new StringBuilder(this.getClass().getSimpleName());
+        if (this.hasBeenFertilized && this.hasBeenHarvested) {
+            response.append(" has been fertilized and harvested.");
+        } else if (this.hasBeenFertilized && !this.hasBeenHarvested) {
+            response.append(" has been fertilized, but not harvested.");
+        } else if (!this.hasBeenFertilized && this.hasBeenHarvested){
+            response.append(" has been harvested, but not fertilized.");
+        } else {
+            response.append(" has not been fertilized nor harvested.");
+        }
+        return response.toString();
     }
 
 }
