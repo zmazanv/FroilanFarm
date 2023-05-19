@@ -2,7 +2,12 @@ package com.zipcodewilmington.froilansfarm;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.zipcodewilmington.froilansfarm.*;
+import com.zipcodewilmington.froilansfarm.classes.*;
+import com.zipcodewilmington.froilansfarm.classes.animals.*;
+import com.zipcodewilmington.froilansfarm.classes.crops.*;
+import com.zipcodewilmington.froilansfarm.classes.persons.*;
+import com.zipcodewilmington.froilansfarm.classes.vehicles.*;
+import com.zipcodewilmington.froilansfarm.interfaces.*;
 
 /*
 Created by leon on 2/26/18.
@@ -63,7 +68,7 @@ public class MainApplication {
         Farm froilanFarm = new Farm(froilanFarmHouse, froilanField);
         System.out.println(froilan);
         System.out.println(froilanda);
-        System.out.println(farm);
+        System.out.println(froilanFarm);
         // Print out the farmVehicles list
         for (Vehicle vehicle : farmVehicles) {
             System.out.println(vehicle);
