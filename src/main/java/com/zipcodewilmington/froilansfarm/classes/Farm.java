@@ -17,9 +17,9 @@ public class Farm {
     private final List<Stable> stables = new ArrayList<>();
     private final List<Vehicle> vehicles = new ArrayList<>();
 
-     public Farm() {
-         this.farmHouse = new FarmHouse();
-         this.field = new Field();
+     public Farm(FarmHouse farmHouse, Field field) {
+         this.farmHouse = farmHouse;
+         this.field = field;
      }
      public Farm(FarmHouse farmHouse, Field field, ChickenCoop chickenCoop, Stable stable, Vehicle vehicle) {
          this.farmHouse = farmHouse;

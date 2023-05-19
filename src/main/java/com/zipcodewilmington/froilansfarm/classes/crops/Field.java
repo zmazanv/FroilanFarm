@@ -93,6 +93,7 @@ public class Field {
 
     @Override
     public String toString() {
-        return containedCropRows.toString();
+        return this.containedCropRows.toString();
     }
+
 }

@@ -2,10 +2,13 @@ package com.zipcodewilmington.froilansfarm;
 
 import com.zipcodewilmington.froilansfarm.classes.Farm;
 import com.zipcodewilmington.froilansfarm.classes.FarmHouse;
+import com.zipcodewilmington.froilansfarm.classes.animals.Horse;
+import com.zipcodewilmington.froilansfarm.classes.animals.Stable;
 import com.zipcodewilmington.froilansfarm.classes.crops.*;
 import com.zipcodewilmington.froilansfarm.classes.persons.Farmer;
 import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -56,8 +59,8 @@ public class MainApplication {
         System.out.println(froilanField.getContainedCropRows().size());
         System.out.println(froilanField.getContainedCropRows());
 
-        Farm froilanFarm = new Farm();
-        
+        Farm froilanFarm = new Farm(froilanFarmHouse, froilanField);
+
     }
 
 }

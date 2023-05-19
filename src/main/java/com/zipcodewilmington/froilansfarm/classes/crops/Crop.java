@@ -54,4 +54,5 @@ public abstract class Crop implements Produce {
                 ", hasBeenHarvested=" + hasBeenHarvested +
                 '}';
     }
+
 }
