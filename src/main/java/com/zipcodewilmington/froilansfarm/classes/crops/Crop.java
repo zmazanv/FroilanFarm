@@ -47,4 +47,11 @@ public abstract class Crop implements Produce {
         this.hasBeenHarvested = false;
     }
 
+    @Override
+    public String toString() {
+        return "Crop{" +
+                "hasBeenFertilized=" + hasBeenFertilized +
+                ", hasBeenHarvested=" + hasBeenHarvested +
+                '}';
+    }
 }

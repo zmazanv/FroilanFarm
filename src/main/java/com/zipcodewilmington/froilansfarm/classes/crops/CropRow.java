@@ -89,4 +89,8 @@ public class CropRow {
         }
     }
 
+    @Override
+    public String toString() {
+        return containedCrops + "\n";
+    }
 }
