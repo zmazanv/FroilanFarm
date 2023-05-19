@@ -9,4 +9,8 @@ public class CropDuster extends Aircraft implements FarmVehicle {
         farm.getField().fertilize();
     }
 
+    @Override
+    public String toString() {
+        return "CropDuster";
+    }
 }
