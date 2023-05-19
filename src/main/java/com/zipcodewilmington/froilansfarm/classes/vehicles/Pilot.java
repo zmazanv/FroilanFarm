@@ -1,8 +1,10 @@
 package com.zipcodewilmington.froilansfarm.classes.vehicles;
 
-import com.zipcodewilmington.froilansfarm.classes.persons.Person;
+import com.zipcodewilmington.froilansfarm.classes.persons.Person
+import com.zipcodeWilmington.froilansfarm.interfaces.Rider;
 
-public class Pilot extends Person {
+public class Pilot extends Person implements Rider {
+    
     private Aircraft aircraft;
 
     public Pilot(String name, Aircraft aircraft) {
@@ -28,6 +30,6 @@ public class Pilot extends Person {
 
     @Override
     public void makeNoise() {
-
+        System.out.println("*YAY*");
     }
 }
