@@ -21,6 +21,8 @@ public class MainApplication {
 
         Tractor tractor = new Tractor();
         CropDuster cropDuster = new CropDuster();
+        farmVehicles.add(tractor);
+        farmVehicles.add(cropDuster);
         Aircraft aircraft = new Aircraft();
         Pilot pilot = new Pilot("Froilanda",cropDuster);
         farmVehicles.add(tractor);
