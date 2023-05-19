@@ -14,4 +14,5 @@ public class Tractor extends Vehicle implements FarmVehicle {
     public String toString() {
         return "Tractor";
     }
+    
 }
