@@ -16,6 +16,7 @@ public interface Botanist {
      and unrelated.
      */
      default void plant(Crop cropToBePlanted, CropRow cropRowPlantedIn) {
+         cropRowPlantedIn.storeCrop(cropToBePlanted);
          System.out.println(this.getClass().getSimpleName() + " has planted a " + cropToBePlanted + '.');
      }
 
