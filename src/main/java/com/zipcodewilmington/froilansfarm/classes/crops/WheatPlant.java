@@ -36,9 +36,4 @@ public class WheatPlant extends Crop {
         }
     }
 
-    @Override
-    public String toString() {
-        return "Wheat Plant";
-    }
-
 }

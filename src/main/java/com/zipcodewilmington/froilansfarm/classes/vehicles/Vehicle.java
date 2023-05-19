@@ -28,4 +28,14 @@ public abstract class Vehicle implements NoiseMaker, Rideable {
         System.out.println("*ROOM*");
     }
 
+    @Override
+    public String toString() {
+        StringBuilder response = new StringBuilder(this.getClass().getSimpleName());
+        if (this.hasBeenMounted) {
+            response.append(" is mounted on.");
+        } else {
+            response.append(" is not mounted on.");
+        }
+        return response.toString();
+    }
 }

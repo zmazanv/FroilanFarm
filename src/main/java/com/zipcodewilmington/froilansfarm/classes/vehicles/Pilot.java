@@ -22,10 +22,9 @@ public class Pilot extends Person implements Rider {
 
     @Override
     public String toString() {
-        return "Pilot{" +
-                "name='" + this.getName() + '\'' +
-                ", uses this aircraft='" + this.aircraft + '\'' +
-                '}';
+        StringBuilder response = new StringBuilder(super.toString());
+        response.append(" pilots a ").append(this.aircraft.getClass().getSimpleName()).append('.');
+        return response.toString();
     }
 
     @Override

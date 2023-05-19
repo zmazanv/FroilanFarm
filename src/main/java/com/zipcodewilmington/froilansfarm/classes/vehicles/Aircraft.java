@@ -6,9 +6,4 @@ public class Aircraft extends Vehicle {
         System.out.println(this.getClass().getSimpleName() + " is in flight.");
     }
 
-    @Override
-    public String toString() {
-        return "Aircraft";
-    }
-    
 }

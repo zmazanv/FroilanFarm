@@ -35,4 +35,8 @@ public abstract class Person implements Eater, NoiseMaker {
         this.name = titledNewName.toString();
     }
 
+    @Override
+    public String toString() {
+        return (this.getClass().getSimpleName() + ' ' + this.getName());
+    }
 }
