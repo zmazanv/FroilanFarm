@@ -79,7 +79,7 @@ public class MainApplication {
         ///////////////////////////////////////////////////////////////////////
         // Horses
         ///////////////////////////////////////////////////////////////////////
-        // Creates 4 Stables
+        // Creates 3 Stables
         Stable stableOne = new Stable();
         Stable stableTwo = new Stable();
         Stable stableThree = new Stable();
