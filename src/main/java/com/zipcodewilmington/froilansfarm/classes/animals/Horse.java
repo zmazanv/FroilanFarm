@@ -1,8 +1,10 @@
 package com.zipcodewilmington.froilansfarm.classes.animals;
 
+import com.zipcodewilmington.froilansfarm.interfaces.Eater;
+import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
 
-public class Horse extends Animal implements Rideable {
+public class Horse extends Animal implements Rideable, Eater {
 
     private boolean hasBeenMounted = false;
 
@@ -37,5 +39,10 @@ public class Horse extends Animal implements Rideable {
         }
         return response.toString();
     }
+        public void eatCorn(int numberOfEars) {
+            // Implementation for eating corn
+            // Feed the horse the specified number of ears of corn
+        }
 
 }
+
