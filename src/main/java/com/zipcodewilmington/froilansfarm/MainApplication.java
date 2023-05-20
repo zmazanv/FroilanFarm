@@ -2,7 +2,6 @@ package com.zipcodewilmington.froilansfarm;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.WeakHashMap;
 
 import com.zipcodewilmington.froilansfarm.classes.*;
 import com.zipcodewilmington.froilansfarm.classes.animals.*;
@@ -176,7 +175,7 @@ public class MainApplication {
         // Adds CropRow for TomatoPlants to Field
         froilanFarmField.storeCropRow(tomatoPlantCropRow);
         //
-        // Adds 3 Mixed Crop Rows
+        // Adds 3 Mixed Crop Rows to Field
         froilanFarmField.storeCropRow(mixedCropRowOne);
         froilanFarmField.storeCropRow(mixedCropRowTwo);
         froilanFarmField.storeCropRow(mixedCropRowThree);
@@ -191,10 +190,9 @@ public class MainApplication {
         // Creates new FarmHouse
         FarmHouse froilanFarmHouse = new FarmHouse();
 
-        // Adds Froilan as resident to the Froilan FarmHouse
+        // Adds Froilan as resident to FarmHouse
         froilanFarmHouse.addResident(froilan);
-        //
-        // Adds Froilanda as resident to the Froilan FarmHouse
+        // Adds Froilanda as resident to FarmHouse
         froilanFarmHouse.addResident(froilanda);
         ///////////////////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////
@@ -202,11 +200,13 @@ public class MainApplication {
         ///////////////////////////////////////////////////////////////////////
         Farm froilanFarm = new Farm(froilanFarmHouse, froilanFarmField);
 
+        // Adds 4 ChickenCoops to Farm
         froilanFarm.addChickenCoop(chickenCoopOne);
         froilanFarm.addChickenCoop(chickenCoopTwo);
         froilanFarm.addChickenCoop(chickenCoopThree);
         froilanFarm.addChickenCoop(chickenCoopFour);
 
+        // Adds 3 Stables to Farm
         froilanFarm.addStable(stableOne);
         froilanFarm.addStable(stableTwo);
         froilanFarm.addStable(stableThree);

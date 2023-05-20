@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.workweek;
 
+<<<<<<< HEAD
 import com.zipcodewilmington.froilansfarm.classes.Farm;
 import com.zipcodewilmington.froilansfarm.classes.animals.Horse;
 import com.zipcodewilmington.froilansfarm.classes.animals.Stable;
@@ -90,5 +91,18 @@ public class Wednesday {
         assertEquals(3, stableTwo.getHeldHorses().size());
         assertEquals(3, stableThree.getHeldHorses().size());
     }
+=======
+import org.junit.Test;
+
+import com.zipcodewilmington.froilansfarm.Routine;
+
+public class Wednesday extends Routine {
+
+    @Test
+    public void testWednesday() {
+        doMorningRoutine();
+    }
+
+>>>>>>> main
 }
 

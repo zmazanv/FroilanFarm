@@ -1,5 +1,7 @@
 package com.zipcodewilmington.froilansfarm.interfaces;
 
+import com.zipcodewilmington.froilansfarm.classes.persons.Person;
+
 public interface Eater {
 
    /*
@@ -13,7 +15,21 @@ public interface Eater {
    and unrelated.
    */
     default void eat(Edible edibleToBeEaten) {
-        System.out.println(this.getClass().getSimpleName() + " ate a " + edibleToBeEaten.getClass().getSimpleName() + '.');
+        StringBuilder eaterName = new StringBuilder(this.getClass().getSimpleName());
+        if (this instanceof Person) {
+            eaterName.append(' ').append(((Person)this).getName());
+        }
+        StringBuilder edibleToBeEatenName = new StringBuilder(edibleToBeEaten.getClass().getSimpleName());
+        char firstLetterOfEdibleToBeEatenName = Character.toLowerCase(edibleToBeEatenName.charAt(0));
+        if (firstLetterOfEdibleToBeEatenName == 'a'
+                || firstLetterOfEdibleToBeEatenName == 'e'
+                || firstLetterOfEdibleToBeEatenName == 'i'
+                || firstLetterOfEdibleToBeEatenName == 'o'
+                || firstLetterOfEdibleToBeEatenName == 'u') {
+            System.out.println(eaterName + " ate an " + edibleToBeEatenName + '.');
+        } else {
+            System.out.println(eaterName + " ate a " + edibleToBeEatenName + '.');
+        }
         /*
         This here is a placeholder which doesn't actually do anything. This is in case we explore nullifying the
         argument passed in at some point, which we may if we have time. This serves no purpose, nor hurts anything, as
