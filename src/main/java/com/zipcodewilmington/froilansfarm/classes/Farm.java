@@ -1,13 +1,13 @@
 package com.zipcodewilmington.froilansfarm.classes;
 
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
+
 import com.zipcodewilmington.froilansfarm.classes.animals.ChickenCoop;
 import com.zipcodewilmington.froilansfarm.classes.animals.Stable;
 import com.zipcodewilmington.froilansfarm.classes.crops.Field;
-import com.zipcodewilmington.froilansfarm.classes.vehicles.Vehicle;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import com.zipcodewilmington.froilansfarm.interfaces.FarmVehicle;
 
 public class Farm {
 
@@ -15,27 +15,27 @@ public class Farm {
     private final Field field;
     private final List<ChickenCoop> chickenCoops = new ArrayList<>();
     private final List<Stable> stables = new ArrayList<>();
-    private final List<Vehicle> vehicles = new ArrayList<>();
+    private final List<FarmVehicle> vehicles = new ArrayList<>();
 
      public Farm(FarmHouse farmHouse, Field field) {
          this.farmHouse = farmHouse;
          this.field = field;
      }
-     public Farm(FarmHouse farmHouse, Field field, ChickenCoop chickenCoop, Stable stable, Vehicle vehicle) {
+     public Farm(FarmHouse farmHouse, Field field, ChickenCoop chickenCoop, Stable stable, FarmVehicle vehicle) {
          this.farmHouse = farmHouse;
          this.field = field;
          this.chickenCoops.add(chickenCoop);
          this.stables.add(stable);
          this.vehicles.add(vehicle);
      }
-     public Farm(FarmHouse farmHouse, Field field, ChickenCoop[] chickenCoops, Stable[] stables, Vehicle[] vehicles) {
+     public Farm(FarmHouse farmHouse, Field field, ChickenCoop[] chickenCoops, Stable[] stables, FarmVehicle[] vehicles) {
          this.farmHouse = farmHouse;
          this.field = field;
          this.chickenCoops.addAll(Arrays.asList(chickenCoops));
          this.stables.addAll(Arrays.asList(stables));
          this.vehicles.addAll(Arrays.asList(vehicles));
      }
-     public Farm(FarmHouse farmHouse, Field field, List<ChickenCoop> chickenCoops, List<Stable> stables, List<Vehicle> vehicles) {
+     public Farm(FarmHouse farmHouse, Field field, List<ChickenCoop> chickenCoops, List<Stable> stables, List<FarmVehicle> vehicles) {
          this.farmHouse = farmHouse;
          this.field = field;
          this.chickenCoops.addAll(chickenCoops);
@@ -159,67 +159,67 @@ public class Farm {
         return clearedStables;
     }
 
-    public List<Vehicle> getVehicles() {
+    public List<FarmVehicle> getVehicles() {
         return this.vehicles;
     }
-    public void addVehicle(Vehicle vehicleToBeAdded) {
+    public void addVehicle(FarmVehicle vehicleToBeAdded) {
         this.vehicles.add(vehicleToBeAdded);
     }
-    public void addVehicles(Vehicle[] vehiclesToBeAdded) {
+    public void addVehicles(FarmVehicle[] vehiclesToBeAdded) {
         this.vehicles.addAll(Arrays.asList(vehiclesToBeAdded));
     }
-    public void addVehicles(List<Vehicle> vehiclesToBeAdded) {
+    public void addVehicles(List<FarmVehicle> vehiclesToBeAdded) {
         this.vehicles.addAll(vehiclesToBeAdded);
     }
-    public Vehicle removeVehicle(int vehicleToBeRemovedIdentificationNumber) {
+    public FarmVehicle removeVehicle(int vehicleToBeRemovedIdentificationNumber) {
         if (this.vehicles.size() >= (vehicleToBeRemovedIdentificationNumber)) {
             return (this.vehicles.remove(vehicleToBeRemovedIdentificationNumber - 1));
         }
         return null;
     }
-    public Vehicle removeVehicle(Vehicle vehicleToBeRemoved) {
+    public FarmVehicle removeVehicle(FarmVehicle vehicleToBeRemoved) {
         if (this.vehicles.contains(vehicleToBeRemoved)) {
             this.vehicles.remove(vehicleToBeRemoved);
             return vehicleToBeRemoved;
         }
         return null;
     }
-    public List<Vehicle> removeVehicles(int startingVehicleToBeRemovedIdentificationNumber, int endingVehicleToBeRemovedIdentificationNumber) {
+    public List<FarmVehicle> removeVehicles(int startingVehicleToBeRemovedIdentificationNumber, int endingVehicleToBeRemovedIdentificationNumber) {
         if (this.vehicles.size() >= startingVehicleToBeRemovedIdentificationNumber && this.vehicles.size() >= endingVehicleToBeRemovedIdentificationNumber) {
-            List<Vehicle> vehiclesSubList = this.vehicles.subList((startingVehicleToBeRemovedIdentificationNumber - 1), endingVehicleToBeRemovedIdentificationNumber);
-            List<Vehicle> removedVehicles = new ArrayList<>(vehiclesSubList);
+            List<FarmVehicle> vehiclesSubList = this.vehicles.subList((startingVehicleToBeRemovedIdentificationNumber - 1), endingVehicleToBeRemovedIdentificationNumber);
+            List<FarmVehicle> removedVehicles = new ArrayList<>(vehiclesSubList);
             this.vehicles.removeAll(vehiclesSubList);
             return removedVehicles;
         }
         return null;
     }
-    public List<Vehicle> removeVehicles(Vehicle[] vehiclesToBeRemoved) {
-        List<Vehicle> removedVehicles = new ArrayList<>(this.vehicles);
-        List<Vehicle> vehiclesToBeRemovedAsList = new ArrayList<>(Arrays.asList(vehiclesToBeRemoved));
+    public List<FarmVehicle> removeVehicles(FarmVehicle[] vehiclesToBeRemoved) {
+        List<FarmVehicle> removedVehicles = new ArrayList<>(this.vehicles);
+        List<FarmVehicle> vehiclesToBeRemovedAsList = new ArrayList<>(Arrays.asList(vehiclesToBeRemoved));
         removedVehicles.retainAll(vehiclesToBeRemovedAsList);
         this.vehicles.removeAll(vehiclesToBeRemovedAsList);
         return removedVehicles;
     }
-    public List<Vehicle> removeVehicles(List<Vehicle> vehiclesToBeRemoved) {
-        List<Vehicle> removedVehicles = new ArrayList<>(this.vehicles);
+    public List<FarmVehicle> removeVehicles(List<FarmVehicle> vehiclesToBeRemoved) {
+        List<FarmVehicle> removedVehicles = new ArrayList<>(this.vehicles);
         removedVehicles.retainAll(vehiclesToBeRemoved);
         this.vehicles.removeAll(vehiclesToBeRemoved);
         return removedVehicles;
     }
-    public List<Vehicle> clearVehicles() {
-        List<Vehicle> clearedVehicles = new ArrayList<>(this.vehicles);
+    public List<FarmVehicle> clearVehicles() {
+        List<FarmVehicle> clearedVehicles = new ArrayList<>(this.vehicles);
         this.vehicles.clear();
         return clearedVehicles;
     }
-    public Vehicle replaceVehicle(int vehicleToBeReplacedIdentificationNumber, Vehicle replacementVehicle) {
+    public FarmVehicle replaceVehicle(int vehicleToBeReplacedIdentificationNumber, FarmVehicle replacementVehicle) {
          if (this.vehicles.size() >= vehicleToBeReplacedIdentificationNumber) {
-             Vehicle replacedVehicle = this.vehicles.remove(vehicleToBeReplacedIdentificationNumber - 1);
+             FarmVehicle replacedVehicle = this.vehicles.remove(vehicleToBeReplacedIdentificationNumber - 1);
              this.vehicles.add(vehicleToBeReplacedIdentificationNumber - 1, replacementVehicle);
              return replacedVehicle;
          }
          return null;
     }
-    public Vehicle replaceVehicle(Vehicle vehicleToBeReplaced, Vehicle replacementVehicle) {
+    public FarmVehicle replaceVehicle(FarmVehicle vehicleToBeReplaced, FarmVehicle replacementVehicle) {
         if (this.vehicles.contains(vehicleToBeReplaced)) {
             int replacedVehicleIndex = this.vehicles.indexOf(vehicleToBeReplaced);
             this.vehicles.remove(vehicleToBeReplaced);
@@ -228,14 +228,14 @@ public class Farm {
         }
         return null;
     }
-    public List<Vehicle> replaceVehicles(Vehicle[] replacementVehicles) {
-         List<Vehicle> replacedVehicles = new ArrayList<>(this.vehicles);
+    public List<FarmVehicle> replaceVehicles(FarmVehicle[] replacementVehicles) {
+         List<FarmVehicle> replacedVehicles = new ArrayList<>(this.vehicles);
          this.vehicles.clear();
          this.vehicles.addAll(Arrays.asList(replacementVehicles));
          return replacedVehicles;
     }
-    public List<Vehicle> replaceVehicles(List<Vehicle> replacementVehicles) {
-        List<Vehicle> replacedVehicles = new ArrayList<>(this.vehicles);
+    public List<FarmVehicle> replaceVehicles(List<FarmVehicle> replacementVehicles) {
+        List<FarmVehicle> replacedVehicles = new ArrayList<>(this.vehicles);
         this.vehicles.clear();
         this.vehicles.addAll(replacementVehicles);
         return replacedVehicles;

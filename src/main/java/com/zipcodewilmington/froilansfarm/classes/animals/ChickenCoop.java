@@ -1,7 +1,7 @@
 package com.zipcodewilmington.froilansfarm.classes.animals;
 
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ChickenCoop {

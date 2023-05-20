@@ -1,7 +1,5 @@
 package com.zipcodewilmington.froilansfarm.classes.crops;
 
-import com.zipcodewilmington.froilansfarm.classes.crops.CropRow;
-
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
@@ -83,12 +81,14 @@ public class Field {
         for (CropRow cropToBeFertilized : this.containedCropRows) {
             cropToBeFertilized.fertilize();
         }
+        System.out.println(this.getClass().getSimpleName() + " has been fertilized.");
     }
 
     public void harvest() {
         for (CropRow cropRowToBeFertilized : this.containedCropRows) {
             cropRowToBeFertilized.harvest();
         }
+        System.out.println(this.getClass().getSimpleName() + " has been harvested.");
     }
 
     @Override
