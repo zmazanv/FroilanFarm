@@ -1,13 +1,13 @@
 package com.zipcodewilmington.froilansfarm.classes;
 
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
+
 import com.zipcodewilmington.froilansfarm.classes.animals.ChickenCoop;
 import com.zipcodewilmington.froilansfarm.classes.animals.Stable;
 import com.zipcodewilmington.froilansfarm.classes.crops.Field;
 import com.zipcodewilmington.froilansfarm.classes.vehicles.Vehicle;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class Farm {
 

@@ -1,7 +1,5 @@
 package com.zipcodewilmington.froilansfarm.classes.crops;
 
-import com.zipcodewilmington.froilansfarm.classes.crops.CropRow;
-
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
