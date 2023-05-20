@@ -13,4 +13,10 @@ public class Farmer extends Person implements Botanist, Rider {
         System.out.println("*YEEHAW*");
     }
 
+    @Override
+    public String toString() {
+        StringBuilder response = new StringBuilder(super.toString());
+        response.append(" works on a Farm.");
+        return response.toString();
+    }
 }

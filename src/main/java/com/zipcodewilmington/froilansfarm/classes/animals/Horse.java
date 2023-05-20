@@ -27,4 +27,15 @@ public class Horse extends Animal implements Rideable {
         System.out.println("*NEIGH*");
     }
 
+    @Override
+    public String toString() {
+        StringBuilder response = new StringBuilder(this.getClass().getSimpleName());
+        if (this.hasBeenMounted) {
+            response.append(" is being ridden.");
+        } else {
+            response.append(" is not being ridden.");
+        }
+        return response.toString();
+    }
+
 }
