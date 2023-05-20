@@ -1,4 +1,14 @@
 package com.zipcodewilmington.froilansfarm.workweek;
 
-public class Wednesday {
+import org.junit.Test;
+
+import com.zipcodewilmington.froilansfarm.Routine;
+
+public class Wednesday extends Routine {
+
+    @Test
+    public void testWednesday() {
+        doMorningRoutine();
+    }
+
 }

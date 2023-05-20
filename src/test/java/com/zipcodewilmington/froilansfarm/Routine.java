@@ -23,7 +23,14 @@ public abstract class Routine {
     //////////////////////////////////////////////////////////////////////////
     protected Farm farm;
     //------------------------------------------------------------------------
-    protected FarmHouse farmHouse;
+    protected FarmHouse farmHouse = new FarmHouse();
+    //////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////
+    // VEHICLES
+    //////////////////////////////////////////////////////////////////////////
+    protected FarmVehicle cropDuster;
+    protected FarmVehicle tractor;
     //////////////////////////////////////////////////////////////////////////
 
     //////////////////////////////////////////////////////////////////////////
@@ -56,15 +63,15 @@ public abstract class Routine {
         //////////////////////////////////////////////////////////////////////////
         // VEHICLES
         //////////////////////////////////////////////////////////////////////////
-        Aircraft cropDuster = new CropDuster();
-        FarmVehicle tractor = new Tractor();
+        cropDuster = new CropDuster();
+        tractor = new Tractor();
         //////////////////////////////////////////////////////////////////////////
 
         //////////////////////////////////////////////////////////////////////////
         // PERSONS
         //////////////////////////////////////////////////////////////////////////
         froilan = new Farmer("Froilan");
-        froilanda = new Pilot("Froilanda", cropDuster);
+        froilanda = new Pilot("Froilanda", (Aircraft)cropDuster);
         //////////////////////////////////////////////////////////////////////////
 
         //////////////////////////////////////////////////////////////////////////
@@ -139,6 +146,9 @@ public abstract class Routine {
         farmHouse.addResident(froilanda);
         //------------------------------------------------------------------------
         farm = new Farm(farmHouse, field);
+        //------------------------------------------------------------------------
+        farm.addVehicle(tractor);
+        farm.addVehicle(tractor);
         //////////////////////////////////////////////////////////////////////////
 
         //////////////////////////////////////////////////////////////////////////
@@ -188,6 +198,62 @@ public abstract class Routine {
     }
 
     public void doMorningRoutine() {
+        //////////////////////////////////////////////////////////////////////////
+        // HORSES
+        //////////////////////////////////////////////////////////////////////////
+        for (int i = 0; i < farm.getStables().size(); i++) {
+            System.out.println("===================================================================================================");
+            System.out.println("Stable " + (i + 1) + " (" + farm.getStables().get(i).getHeldHorses().size() + " Horses):");
+            System.out.println("===================================================================================================");
+            for (int ii = 0; ii < farm.getStables().get(i).getHeldHorses().size(); ii++) {
+                System.out.println("-------------------------------");
+                System.out.println("Horse " + (ii + 1) + ':');
+                System.out.println("-------------------------------");
+                //------------------------------------------------------------------------
+                // Froilan rides each Horse in their Stables
+                froilan.mount(farm.getStables().get(i).getHeldHorses().get(ii));
+                System.out.println();
+                froilan.dismount(farm.getStables().get(i).getHeldHorses().get(ii));
+                System.out.println();
+                //------------------------------------------------------------------------
+                // Froilan feeds each Horse 3 Ears of Corn
+                for (int iii = 0; iii < 3; iii++) {
+                    froilan.feed(farm.getStables().get(i).getHeldHorses().get(ii), new EarOfCorn());
+                }
+                //------------------------------------------------------------------------
+                if (farm.getStables().get(i).getHeldHorses().size() - ii == 1) {
+                    System.out.println("-------------------------------");
+                }
+            }
+            if (farm.getStables().size() - i == 1) {
+                System.out.println("===================================================================================================");
+            }
+        }
+        //////////////////////////////////////////////////////////////////////////
+        System.out.println();
+        //////////////////////////////////////////////////////////////////////////
+        // BREAKFAST
+        //////////////////////////////////////////////////////////////////////////
+        System.out.println("===================================================================================================");
+        // Froilan eats 1 Ear of Corn, 2 Tomatoes, and 5 Eggs
+        froilan.eat(new EarOfCorn());
+        for (int i = 0; i < 2; i++) {
+            froilan.eat(new Tomato());
+        }
+        for (int i = 0; i < 5; i++) {
+            froilan.eat(new EdibleEgg());
+        }
+        System.out.println("-------------------------------");
+        // Froilanda eats 2 Ears of Corn, 1 Tomato, and 2 Eggs
+        for (int i = 0; i < 2; i++) {
+            froilanda.eat(new EarOfCorn());
+        }
+        froilanda.eat(new Tomato());
+        for (int i = 0; i < 2; i++) {
+            froilanda.eat(new EdibleEgg());
+        }
+        System.out.println("===================================================================================================");
     }
+    //////////////////////////////////////////////////////////////////////////
 
 }

@@ -25,10 +25,12 @@ public abstract class Crop implements Produce {
     }
 
     public void fertilize() {
+        System.out.println(this.getClass().getSimpleName() + " has been fertilized.");
         this.hasBeenFertilized = true;
     }
 
     public void harvest() {
+        System.out.println(this.getClass().getSimpleName() + " has been harvested.");
         this.hasBeenHarvested = true;
     }
 

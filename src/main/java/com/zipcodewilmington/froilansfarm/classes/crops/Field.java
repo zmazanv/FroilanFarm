@@ -81,12 +81,14 @@ public class Field {
         for (CropRow cropToBeFertilized : this.containedCropRows) {
             cropToBeFertilized.fertilize();
         }
+        System.out.println(this.getClass().getSimpleName() + " has been fertilized.");
     }
 
     public void harvest() {
         for (CropRow cropRowToBeFertilized : this.containedCropRows) {
             cropRowToBeFertilized.harvest();
         }
+        System.out.println(this.getClass().getSimpleName() + " has been harvested.");
     }
 
     @Override
