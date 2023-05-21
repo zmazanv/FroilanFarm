@@ -29,6 +29,8 @@ public class Saturday extends Routine {
          * yielded. If true, the cycle restarts, where their fertilization
          * is set to false.
          */
+        cropDuster.operate(farm);
+        tractor.operate(farm);
         for (CropRow cropRowToBeYielded : field.getContainedCropRows()) {
             for (Crop cropsToBeYielded : cropRowToBeYielded.getContainedCrops()) {
                 cropsToBeYielded.yield();
