@@ -21,9 +21,9 @@ public class FarmHouse {
 //        this.residents.addAll(residents);
 //    }
 //
-//    public List<Person> getCurrentResidents() {
-//        return this.residents;
-//    }
+    public List<Person> getCurrentResidents() {
+        return this.residents;
+    }
 
     public void addResident(Person residentToBeAdded) {
         System.out.println(residentToBeAdded.getName() + " has entered the farmHouse.");
