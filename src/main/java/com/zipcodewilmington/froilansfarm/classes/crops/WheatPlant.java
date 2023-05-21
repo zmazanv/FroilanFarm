@@ -7,9 +7,9 @@ public class WheatPlant extends Crop {
     public WheatPlant() {
         super();
     }
-    public WheatPlant(boolean hasBeenFertilized, boolean hasBeenHarvested) {
-        super(hasBeenFertilized, hasBeenHarvested);
-    }
+//    public WheatPlant(boolean hasBeenFertilized, boolean hasBeenHarvested) {
+//        super(hasBeenFertilized, hasBeenHarvested);
+//    }
 
     /*
     This method checks the `CornStalk`'s flags and if both `true`, it will yield (return)
