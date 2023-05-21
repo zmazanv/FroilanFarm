@@ -26,6 +26,7 @@ public class FarmHouse {
     }
 
     public void addResident(Person residentToBeAdded) {
+        System.out.println(residentToBeAdded.getName() + " has entered the farmHouse.");
         this.residents.add(residentToBeAdded);
     }
     public void addResidents(Person[] residentsToBeAdded) {
@@ -58,6 +59,7 @@ public class FarmHouse {
     public List<Person> clearResidents() {
         List<Person> clearedResidents = new ArrayList<>(this.residents);
         this.residents.clear();
+        System.out.println("All residents have been cleared out of the farmHouse.");
         return clearedResidents;
     }
 
