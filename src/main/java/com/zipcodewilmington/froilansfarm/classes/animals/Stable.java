@@ -73,10 +73,10 @@ public class Stable {
 //        this.heldHorses.removeAll(horsesToBeRemoved);
 //        return removedHorses;
 //    }
-//    public List<Horse> clearHorses() {
-//        List<Horse> clearedHorses = new ArrayList<>(this.heldHorses);
-//        this.heldHorses.clear();
-//        return clearedHorses;
-//    }
+    public List<Horse> clearHorses() {
+        List<Horse> clearedHorses = new ArrayList<>(this.heldHorses);
+        this.heldHorses.clear();
+        return clearedHorses;
+    }
     
 }

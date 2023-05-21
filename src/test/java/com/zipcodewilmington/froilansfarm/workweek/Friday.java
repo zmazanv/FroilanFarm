@@ -33,9 +33,15 @@ public class Friday extends Routine {
          * each chicken if they each yields an edible egg.
          */
         // Froilan removes all horses in stable #3
-        for (int x = stableOne.getHeldHorses().size(); x > 0; x--) {
-            stableOne.removeHorse(x);
+        for (int x = stableThree.getHeldHorses().size(); x > 0; x--) {
+            stableThree.removeHorse(x);
         }
+        Assert.assertEquals(0, stableThree.getHeldHorses().size());
+        // Froilan removes all horses from all stables
+        for (Stable checkStables : farm.getStables()) {
+            checkStables.clearHorses();
+        }
+        Assert.assertEquals(0, stableTwo.getHeldHorses().size());
         Assert.assertEquals(0, stableOne.getHeldHorses().size());
 
         // Froilan checks if each chicken is fertilized where each one yields an egg if true
@@ -53,6 +59,13 @@ public class Friday extends Routine {
             chickenCoopOne.removeChicken(x);
         }
         Assert.assertEquals(0, chickenCoopOne.getHeldChickens().size());
+        // Froilan removes all chickens in each chicken coop
+        for (ChickenCoop checkChickenCoop : farm.getChickenCoops()) {
+            checkChickenCoop.clearChickens();
+        }
+        Assert.assertEquals(0, chickenCoopTwo.getHeldChickens().size());
+        Assert.assertEquals(0, chickenCoopThree.getHeldChickens().size());
+        Assert.assertEquals(0, chickenCoopFour.getHeldChickens().size());
     }
 
 }

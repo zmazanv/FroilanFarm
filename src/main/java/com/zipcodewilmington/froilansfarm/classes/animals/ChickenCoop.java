@@ -60,10 +60,10 @@ public class ChickenCoop {
 //        this.heldChickens.removeAll(chickensToBeRemoved);
 //        return removedChickens;
 //    }
-//    public List<Chicken> clearChickens() {
-//        List<Chicken> clearedChickens = new ArrayList<>(this.heldChickens);
-//        this.heldChickens.clear();
-//        return clearedChickens;
-//    }
+    public List<Chicken> clearChickens() {
+        List<Chicken> clearedChickens = new ArrayList<>(this.heldChickens);
+        this.heldChickens.clear();
+        return clearedChickens;
+    }
 
 }
