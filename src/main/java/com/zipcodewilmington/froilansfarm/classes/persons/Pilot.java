@@ -1,6 +1,6 @@
-package com.zipcodewilmington.froilansfarm.classes.vehicles;
+package com.zipcodewilmington.froilansfarm.classes.persons;
 
-import com.zipcodewilmington.froilansfarm.classes.persons.Person;
+import com.zipcodewilmington.froilansfarm.classes.vehicles.Aircraft;
 import com.zipcodewilmington.froilansfarm.interfaces.Rider;
 
 public class Pilot extends Person implements Rider {

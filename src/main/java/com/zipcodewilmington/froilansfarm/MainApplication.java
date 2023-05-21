@@ -8,7 +8,6 @@ import com.zipcodewilmington.froilansfarm.classes.animals.*;
 import com.zipcodewilmington.froilansfarm.classes.crops.*;
 import com.zipcodewilmington.froilansfarm.classes.persons.*;
 import com.zipcodewilmington.froilansfarm.classes.vehicles.*;
-import com.zipcodewilmington.froilansfarm.interfaces.*;
 
 /*
 Created by leon on 2/26/18.
