@@ -12,13 +12,13 @@ public class Pilot extends Person implements Rider {
         this.aircraft = aircraft;
     }
 
-    public Aircraft getAircraft() {
-        return this.aircraft;
-    }
+//    public Aircraft getAircraft() {
+//        return this.aircraft;
+//    }
 
-    public void setAircraft(Aircraft aircraft) {
-        this.aircraft = aircraft;
-    }
+//    public void setAircraft(Aircraft aircraft) {
+//        this.aircraft = aircraft;
+//    }
 
     @Override
     public String toString() {

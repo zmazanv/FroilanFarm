@@ -10,9 +10,9 @@ public class Chicken extends Animal implements Produce {
     public Chicken() {
         this.hasBeenFertilized = false;
     }
-    public Chicken(boolean hasBeenFertilized) {
-        this.hasBeenFertilized = hasBeenFertilized;
-    }
+//    public Chicken(boolean hasBeenFertilized) {
+//        this.hasBeenFertilized = hasBeenFertilized;
+//    }
 
     public void fertilize() {
         this.hasBeenFertilized = true;
