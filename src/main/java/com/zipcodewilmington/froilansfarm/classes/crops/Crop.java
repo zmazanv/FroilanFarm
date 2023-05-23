@@ -11,10 +11,10 @@ public abstract class Crop implements Produce {
         this.hasBeenFertilized = false;
         this.hasBeenHarvested = false;
     }
-    public Crop(boolean hasBeenFertilized, boolean hasBeenHarvested) {
-        this.hasBeenFertilized = hasBeenFertilized;
-        this.hasBeenHarvested = hasBeenHarvested;
-    }
+//    public Crop(boolean hasBeenFertilized, boolean hasBeenHarvested) {
+//        this.hasBeenFertilized = hasBeenFertilized;
+//        this.hasBeenHarvested = hasBeenHarvested;
+//    }
 
     public boolean isFertilized() {
         return this.hasBeenFertilized;
@@ -25,10 +25,12 @@ public abstract class Crop implements Produce {
     }
 
     public void fertilize() {
+        System.out.println(this.getClass().getSimpleName() + " has been fertilized.");
         this.hasBeenFertilized = true;
     }
 
     public void harvest() {
+        System.out.println(this.getClass().getSimpleName() + " has been harvested.");
         this.hasBeenHarvested = true;
     }
 
@@ -45,6 +47,21 @@ public abstract class Crop implements Produce {
     protected void restartCycle() {
         this.hasBeenFertilized = false;
         this.hasBeenHarvested = false;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder response = new StringBuilder(this.getClass().getSimpleName());
+        if (this.hasBeenFertilized && this.hasBeenHarvested) {
+            response.append(" has been fertilized and harvested.");
+        } else if (this.hasBeenFertilized && !this.hasBeenHarvested) {
+            response.append(" has been fertilized, but not harvested.");
+        } else if (!this.hasBeenFertilized && this.hasBeenHarvested){
+            response.append(" has been harvested, but not fertilized.");
+        } else {
+            response.append(" has not been fertilized nor harvested.");
+        }
+        return response.toString();
     }
 
 }

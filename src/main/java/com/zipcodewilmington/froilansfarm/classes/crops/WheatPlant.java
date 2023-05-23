@@ -2,12 +2,12 @@ package com.zipcodewilmington.froilansfarm.classes.crops;
 
 import com.zipcodewilmington.froilansfarm.interfaces.Edible;
 
-public class CornStalk extends Crop {
+public class WheatPlant extends Crop {
 
-    public CornStalk() {
+    public WheatPlant() {
         super();
     }
-//    public CornStalk(boolean hasBeenFertilized, boolean hasBeenHarvested) {
+//    public WheatPlant(boolean hasBeenFertilized, boolean hasBeenHarvested) {
 //        super(hasBeenFertilized, hasBeenHarvested);
 //    }
 
@@ -20,16 +20,16 @@ public class CornStalk extends Crop {
     public Edible yield() {
         if (this.isFertilized() && this.isHarvested()) {
             this.restartCycle();
-            System.out.println("An Ear of Corn has been yielded by its " + this.getClass().getSimpleName() + '.');
+            System.out.println("A grain of wheat has been yielded by its " + this.getClass().getSimpleName() + '.');
             return (new EarOfCorn());
         } else {
             StringBuilder response = new StringBuilder("The " + this.getClass().getSimpleName() + " is not ready as it has not been ");
             if (!this.isFertilized() && !this.isHarvested()) {
-                response.append("fertilized nor harvested. Once fertilized and harvested, it will be able to yield an Ear of Corn.");
+                response.append("fertilized nor harvested. Once fertilized and harvested, it will be able to yield a grain of wheat.");
             } else if (!this.isFertilized() && this.isHarvested()) {
-                response.append("fertilized. Once fertilized, it will be able to yield an Ear of Corn.");
+                response.append("fertilized. Once fertilized, it will be able to yield a grain wheat.");
             } else {
-                response.append("harvested. Once harvested, it will be able to yield an Ear of Corn.");
+                response.append("harvested. Once harvested, it will be able to yield a grain of wheat.");
             }
             System.out.println(response);
             return null;
